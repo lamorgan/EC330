@@ -1,0 +1,15 @@
+PartA:
+-result: 44961
+
+-explanation: For my approach to PartA I went through the data file character by character to find all of the 'U' characters. If it wasn't a 'U' then it proceded to the next character. If the character was a 'U' then it went through the rest of the loop. The rest of the loop was looking at the characters that followed 'U'. It was looking to see if the characters that followed were digits or not. If the character was a digit then it added 1 to the id_num variable which kept track of the number of digits that followed the 'U' because in order to be an id number there has to be 8 digits. Once it encountered a non-digit character, the total id_num variable was looked at to see if there were 8 digits. If there were 8 digits the sum of the digits was looked at next. The sum of the id number was kept track of in the id_sum variable. If the sum of the id number was between 31 and 68 then it added to the id_count which is the value that was returned and printed. 
+
+PartB:
+-result: 308846329
+
+explanation: For PartB a trie was implemented. To implement the trie I made a class and treated it sort of like a linked list. Each node held a different character. The dictionary.txt file was read into the trie and each word was placed into it. After the trie was built then the strings from the BigData.txt file was searched through. There is a searchWord fucntion that searches for the word in the trie. The countWords function searches for substrings in the string because those also count as individual words.
+
+PartC:
+-result:   BRpmpRB
+
+
+-explanation: For my approach to PartC I iterated through the data file and compared what the string looked like originally to what it looked like when it was iterated through backwards. I didn't implement a trie, or a FSM because I couldn't think of a way to traverse backwards through them so I decided to iterate through the data file.
