@@ -1,0 +1,10 @@
+Idea for hash function:
+
+https://stackoverflow.com/questions/8317508/hash-function-for-a-string
+
+I started by making a boolean vector (my_filter) to store the BloomFilter in. I made it a member in the BloomFilter.h file. 
+I then initialized the vector to be the length of the given input and to be all zeros.
+In the insert function I call the two hash functions which returns an index of the my_filter vector and insert a 1 into the my_filter vector. This indicates where the string could potentially be.
+For the hash functions I just used two different prime number values to come up with two different hash values.
+In the exists function I went to the hash functions again and compared those index values to the my_filter vector to see if both values were a 1. If they were both a 1 I returned true indicating that the string could possibly be in the bloom filter. If they were not both 1's then it returns false and indicates that the string is definitely not in the filter. 
+For the output I just converted my boolean vector to a string and returned the string. 
