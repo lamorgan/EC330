@@ -1,0 +1,7 @@
+In my algorithm I stored the longest common subsequence in an integer array of the size [m+1][n+1] where m is the length of the first string and n is the length of the second string.
+I then looped through both strings and stored the characters that were the same in the integer array that I called L.
+The value L[m][n] then contains the length of the longest common subsequence.
+To print the longest common subsequence I travesered through the array L[m][n] and stored that character into a character array that I called lcs. 
+Once the while loop is done printing then lcs will contain the longest common subsequence
+
+The runtime of this algorithm is O(m*n)
